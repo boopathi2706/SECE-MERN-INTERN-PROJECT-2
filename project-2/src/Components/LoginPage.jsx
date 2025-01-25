@@ -1,7 +1,8 @@
 import "../css/Login.css";
-
+import { Link } from "react-router-dom";
 const LoginPage = () => {
   return (
+    <div className="login_body">
       <div className="container">
         <h2 className="title">Login</h2>
         <div className="user_input">
@@ -18,9 +19,9 @@ const LoginPage = () => {
         </div>
 
         <p className="forget">Forget Password</p>
-        <button className="btn login_btn">Login</button>
+        <button className="btn login_btn"><Link className="nevigate_sign" to={'/main'}>Login</Link></button>
         <p className="create_new_account">
-          Create an Account <span>Sign up</span>
+          Create an Account <span><Link className="sign_link" to='/signup'>Sign up</Link></span>
         </p>
         <p className="with">Login with</p>
         <div className="link_container">
@@ -29,6 +30,7 @@ const LoginPage = () => {
           <div className="link link3"></div>
           <div className="link link4"></div>
         </div>
+      </div>
       </div>
   );
 };
