@@ -1,6 +1,6 @@
 import "../css/Navbar.css";
 import { Link } from "react-router-dom";
-const Navbar = ({ onClickStory, onClickContact }) => {
+const Navbar = ({ onClickStory, onClickContact,onClickMain }) => {
   return (
     <div className="nav_container">
       <h2 className="Logo_title">
@@ -8,7 +8,10 @@ const Navbar = ({ onClickStory, onClickContact }) => {
       </h2>
       <ul className="nav_items">
         <li className="nav_item">
-          <Link to={"/main"} className="links">
+          <Link to="#" onClick={(e)=>{
+            e.preventDefault();
+            onClickMain();
+          }} className="links" id="home">
             Home
           </Link>
         </li>
@@ -19,15 +22,14 @@ const Navbar = ({ onClickStory, onClickContact }) => {
               e.preventDefault(); 
               onClickStory();
             }}
-            className="links"
-          >
+            className="links" id="story">
             Add Story
           </Link>
         </li>
         <li className="nav_item">
           <Link
             to="#"
-            className="links"
+            className="links" id="contact"
             onClick={(e) => {
               e.preventDefault(); 
               onClickContact();
