@@ -1,7 +1,19 @@
+import { useState } from "react";
 import "../css/Signup.css";
 import { Link } from "react-router-dom";
 
 const Signup = () => {
+  const [name,setName]=useState("");
+  const [email,setEmail]=useState("");
+  const [password,setPassword]=useState("");
+  const handleSignup=()=>{
+    if(name!=="" && email!=="" && password !==""){
+      alert("signup successfully");
+    }
+    else{
+      alert("unsuccessfully");
+    }
+  }
   return (
     <div className="signup_body">
       <div className="container">
@@ -10,21 +22,21 @@ const Signup = () => {
           <label htmlFor="username" className="lables">
             User name
           </label><br />
-          <input type="text" id="username" className="inputs" required />
+          <input type="text" id="username" className="inputs" onChange={(e)=>{setName(e.target.value)}} required />
         </div>
         <div className="user_input">
           <label htmlFor="email" className="lables">
             Email id
           </label><br />
-          <input type="email" id="email" className="inputs" required />
+          <input type="email" id="email" className="inputs" onChange={(e)=>{setEmail(e.target.value)}} required />
         </div>
         <div className="user_input">
           <label htmlFor="password" className="lables">
             Password
           </label><br />
-          <input type="password" id="password" className="inputs" required />
+          <input type="password" id="password" className="inputs" onChange={(e)=>{setPassword(e.target.value)}} required />
         </div>
-        <button className="btn login_btn"><Link className="btn_link" to={'/main'}>Sign up</Link></button>
+        <button className="btn login_btn" type="submit" onClick={handleSignup}><Link className="btn_link" to={'/main'}>Sign up</Link></button>
         <p className="create_new_account">
           Already have an Account <span><Link className="login_link" to='/'>Login</Link></span>
         </p>

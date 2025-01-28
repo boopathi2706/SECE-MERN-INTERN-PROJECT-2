@@ -1,25 +1,41 @@
+import { useState } from "react";
 import "../css/Login.css";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import MainDash from "./MainDash";
 const LoginPage = () => {
+  const navigate=useNavigate();
+  const [username,setUsername]=useState("");
+  const [password,setPassword]=useState("");
+  var url='';
+  const handleLogin=()=>{
+   
+    if(username==="Boopathi" && password==="12345678" ){
+       alert("login successfully");
+       url='/main';
+    }
+    else{
+      alert("login unsuccesfull (Username / Password invalid)");
+    }
+  }
   return (
-    <div className="login_body">
+      <div className="login_body">
       <div className="container">
         <h2 className="title">Login</h2>
         <div className="user_input">
           <label htmlFor="username" className="lables">
             User name
           </label><br />
-          <input type="text" id="username" className="inputs" required />
+          <input type="text" id="username" className="inputs" onChange={(e)=>{setUsername(e.target.value)}} required />
         </div>
         <div className="user_input">
           <label htmlFor="password" className="lables">
             Password
           </label><br />
-          <input type="password" id="password" className="inputs" required />
+          <input type="password" id="password" className="inputs" onChange={(e)=>setPassword(e.target.value)} required />
         </div>
 
         <p className="forget">Forget Password</p>
-        <button className="btn login_btn"><Link className="nevigate_sign" to={'/main'}>Login</Link></button>
+        <button className="btn login_btn" onClick={handleLogin}><Link to={'/main'} className="nevigate_sign" >Login</Link></button>
         <p className="create_new_account">
           Create an Account <span><Link className="sign_link" to='/signup'>Sign up</Link></span>
         </p>
@@ -32,6 +48,7 @@ const LoginPage = () => {
         </div>
       </div>
       </div>
+    
   );
 };
 export default LoginPage;
