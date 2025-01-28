@@ -44,6 +44,7 @@ const MainDash = () => {
       <div><Contact /></div>}
       {main && 
       <div><StoryBoard /></div>}
+      {log && <div><Logout/></div> }
     </div>
   );
 };
