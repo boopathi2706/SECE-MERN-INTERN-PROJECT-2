@@ -1,0 +1,30 @@
+.logout_body{
+    width: 100vw;
+    height: 92vh;
+    display: flex;
+    align-items: start;
+    justify-content: end;
+}
+.logout_container{
+   width: 7%;
+   height: 7%;
+   margin-right: 2%;
+   padding: 0 1%;
+   margin-top:3px;
+   background-color:rgba(255, 255, 255, 0.845);
+   display: flex;
+   align-items: center;
+   justify-content: space-around;
+   border-radius: 5px;
+}
+.logout_container h3{
+    color: rgba(0, 0, 0, 0.721);
+    font-size: 1rem;
+}
+.link_log{
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    column-gap: 1%;
+
+}

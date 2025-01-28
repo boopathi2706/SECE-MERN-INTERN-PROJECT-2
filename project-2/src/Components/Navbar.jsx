@@ -1,6 +1,6 @@
 import "../css/Navbar.css";
 import { Link } from "react-router-dom";
-const Navbar = ({ onClickStory, onClickContact,onClickMain }) => {
+const Navbar = ({ onClickStory, onClickContact,onClickMain,onClickLogout }) => {
   return (
     <div className="nav_container">
       <h2 className="Logo_title">
@@ -38,7 +38,10 @@ const Navbar = ({ onClickStory, onClickContact,onClickMain }) => {
             Contact Me
           </Link>
         </li>
-        <div className="profile"></div>
+        <div className="profile" onClick={(e)=>{
+          e.preventDefault();
+          onClickLogout();
+        }}></div>
       </ul>
     </div>
   );

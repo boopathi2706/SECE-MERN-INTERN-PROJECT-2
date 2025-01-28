@@ -44,5 +44,9 @@
     width: 10%;
     height: 70%;
     border-radius: 50%;
-    background-color: black;
+    background:url("../img/profile.jpg");
+    background-position: center;
+    background-size: cover;
+    cursor: pointer;
+    border: 5px solid #B900B4;
 }
