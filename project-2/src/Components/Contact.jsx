@@ -10,7 +10,7 @@ const Contact = () => {
           Email ID
         </label>
         <br />
-        <input type="email" id="contact" className="inputs" required />
+        <input type="email" id="contact" className="inputs3" required />
       </div>
       <div className="Contact_user_text">
         <label htmlFor="password" className="lables">

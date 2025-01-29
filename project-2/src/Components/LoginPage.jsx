@@ -21,17 +21,17 @@ const LoginPage = () => {
       <div className="login_body">
       <div className="container">
         <h2 className="title">Login</h2>
-        <div className="user_input">
+        <div className="user2_input">
           <label htmlFor="username" className="lables">
             User name
           </label><br />
-          <input type="text" id="username" className="inputs" onChange={(e)=>{setUsername(e.target.value)}} required />
+          <input type="text" id="username" className="inputs1" onChange={(e)=>{setUsername(e.target.value)}} required />
         </div>
-        <div className="user_input">
+        <div className="user2_input">
           <label htmlFor="password" className="lables">
             Password
           </label><br />
-          <input type="password" id="password" className="inputs" onChange={(e)=>setPassword(e.target.value)} required />
+          <input type="password" id="password" className="inputs1" onChange={(e)=>setPassword(e.target.value)} required />
         </div>
 
         <p className="forget">Forget Password</p>

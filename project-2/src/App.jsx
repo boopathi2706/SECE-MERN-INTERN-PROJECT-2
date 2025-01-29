@@ -4,7 +4,6 @@ import './App.css';
 import MainDash from './Components/MainDash';
 import {BrowserRouter,Routes,Route} from 'react-router-dom';
 import Navbar from './Components/Navbar';
-import AddStory from './Components/AddStory';
 import Contact from './Components/Contact';
 import StoryBoard from './Components/StoryBoard';
 import Logout from './Components/Logout';
@@ -17,7 +16,6 @@ function App() {
                <Route path='/signup' element={<Signup/>}></Route>
                <Route path='/main' element={<MainDash/>}></Route>
                <Route path='/nav' element={<Navbar/>}></Route>
-               <Route path='/add-story' element={<AddStory/>}></Route>
               < Route path='/contact' element={<Contact/>}></Route>
               < Route path='/storyBoard' element={<StoryBoard/>}></Route>
               < Route path='/logout' element={<Logout/>}></Route>
