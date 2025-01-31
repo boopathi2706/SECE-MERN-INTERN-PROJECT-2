@@ -6,14 +6,6 @@ const Signup = () => {
   const [name,setName]=useState("");
   const [email,setEmail]=useState("");
   const [password,setPassword]=useState("");
-  const handleSignup=()=>{
-    if(name!=="" && email!=="" && password !==""){
-      alert("signup successfully");
-    }
-    else{
-      alert("unsuccessfully");
-    }
-  }
   return (
     <div className="signup_body">
       <div className="container">
