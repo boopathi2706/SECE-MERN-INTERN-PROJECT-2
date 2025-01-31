@@ -11,7 +11,7 @@ const LoginPage = () => {
    
     if(username==="Boopathi" && password==="12345678" ){
        alert("login successfully");
-       url='/main';
+       navigate('/main');
     }
     else{
       alert("login unsuccesfull (Username / Password invalid)");
@@ -35,7 +35,7 @@ const LoginPage = () => {
         </div>
 
         <p className="forget">Forget Password</p>
-        <button className="btn login_btn" onClick={handleLogin}><Link to={'/main'} className="nevigate_sign" >Login</Link></button>
+        <button className="btn login_btn" onClick={handleLogin}>Login</button>
         <p className="create_new_account">
           Create an Account <span><Link className="sign_link" to='/signup'>Sign up</Link></span>
         </p>
